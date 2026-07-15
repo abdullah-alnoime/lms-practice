@@ -1,10 +1,16 @@
-import dotenv from "dotenv";
-dotenv.config();
+import express from "express";
+import connectDB from "./config/connection.js";
+import memberRouter from "./routes/member.js";
+import bookRouter from "./routes/book.js";
 
-import app from "./app.controller.js";
+const app = express();
+app.use(express.json());
 
-const PORT = process.env.SERVER_PORT ;
+app.use("/api/v1/member", memberRouter);
+app.use("/api/v1/book", bookRouter);
 
-app().listen(PORT, () => {
-    console.log(`✅ Server is running on port ${PORT}`);
+connectDB();
+
+app.listen(5000, () => {
+  console.log("listening on port 5000");
 });
