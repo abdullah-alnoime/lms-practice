@@ -14,7 +14,6 @@ dist-ssr
 nifti
 
 # Editor directories and files
-.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -25,7 +24,6 @@ nifti
 *.sw?
 
 # environment
-.env
 
 # cloudflare
 .wrangler
@@ -37,3 +35,4 @@ nifti
 package-lock
 
 .vite
+config.bat

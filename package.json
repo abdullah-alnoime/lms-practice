@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch index.js"
+    "dev": "node init && node --watch index.js"
   },
   "keywords": [],
   "type": "module",
